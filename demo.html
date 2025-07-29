@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo animations</title>
+    <style>
+        .typeanime{
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: type 20s steps(100,end) forwards;
+            margin: 0 auto;
+        }
+        @keyframes type{
+            from{
+                width: 0;
+            }
+            to{
+                width: 100ch;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="typeanime">This is also called typing animations. this is special about typing</h1>
+    
+</body>
+</html>
