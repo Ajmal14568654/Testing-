@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo animations</title>
+    <style>
+        .blank{
+            width: 100%;
+            height: 700px;
+            background-color: aquamarine;
+        }
+        .typeanime{
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: type 20s steps(100,end) forwards;
+            margin: 0 auto;
+        }
+        @keyframes type{
+            from{
+                width: 0;
+            }
+            to{
+                width: 100ch;
+            }
+        }
+        #container1{
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              
+        }
+        #box{
+            width: 400px;
+            height: 400px;
+            background-color: orangered;
+            margin: 10px;
+        
+        }
+        .box1 { /* opacity animation*/
+        animation: anime1 linear forwards;
+        animation-timeline: view();
+         animation-range: entry 0% cover 30%;
+        }
+        @keyframes anime1 {
+            from { opacity: 0; scale:0.5; }
+            to { opacity: 1; scale:1; }
+         }
+        .box2 { /* fromleft animation*/
+        animation: anime2 linear forwards;
+        animation-timeline: view();
+         animation-range: entry 0% cover 30%;
+        }
+        @keyframes anime2 {
+            from { opacity: 0; transform: translateX(-100px); }
+            to { opacity: 1; transform: translateX(0); }
+         }
+        .box3 { /* fromright animation*/
+        animation: anime3 linear forwards;
+        animation-timeline: view();
+         animation-range: entry 0% cover 30%;
+        }
+        @keyframes anime3 {
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
+         }
+        .box4 { /* fromtop animation*/
+        animation: anime4 linear forwards;
+        animation-timeline: view();
+         animation-range: entry 0% cover 30%;
+        }
+        @keyframes anime4 {
+            from { opacity: 0; transform: translateY(-100px); }
+            to { opacity: 1; transform: translateY(0); }
+         } 
+        .box5 { /* frombottom animation*/
+        animation: anime5 linear forwards;
+        animation-timeline: view();
+         animation-range: entry 0% cover 30%;
+        }
+        @keyframes anime5 {
+            from { opacity: 0; transform: translateY(100px); }
+            to { opacity: 1; transform: translateY(0); }
+         } 
+        .box6 { /* ROTATE animation*/
+        animation: anime6 linear forwards;
+        animation-timeline: view();
+         animation-range: entry 0% cover 30%;
+        }
+        @keyframes anime6 {
+            from { opacity: 0; transform: rotate(-180deg); }
+            to { opacity: 1; transform: rotate(0); }
+         } 
+        .box7 { /* rotate horizontal animation*/
+        animation: anime7 linear forwards;
+        animation-timeline: view();
+         animation-range: entry 0% cover 30%;
+        }
+        @keyframes anime7 {
+            from { opacity: 0; transform: rotateY(-180deg); }
+            to { opacity: 1; transform: rotateY(0); }
+         } 
+        .box8 { /* widthincrease animation*/
+        animation: anime8 linear forwards;
+        animation-timeline: view();
+         animation-range: entry 0% cover 30%;
+        }
+        @keyframes anime8 {
+             from { opacity: 0; transform: rotateY(90deg); }
+             to { opacity: 1; transform: rotateY(0); }
+         } 
+        .box9 { /* bounce animation*/
+        animation: anime9 linear forwards;
+        animation-timeline: view();
+         animation-range: entry 0% cover 30%;
+        }
+        @keyframes anime9 {
+            0% { opacity: 0; transform: scale(0.3); }
+            50% { opacity: 1; transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .box10 { /* pulse animation same as bounce*/
+            animation: anime10 linear forwards;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+        }
+        @keyframes anime10 {
+            0% { opacity: 0; transform: scale(0.95); }
+            50% { opacity: 1; transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .box11 { /*slanting from right*/
+            animation: anime11 linear forwards;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+        }
+        @keyframes anime11{
+            from { opacity: 0; transform: rotate(-15deg); }
+            to { opacity: 1; transform: rotate(0); }
+        }
+        .box12 {/*slanting from left*/
+            animation: lightSpeedIn linear forwards;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+        }
+        @keyframes lightSpeedIn {
+            from { opacity: 0; transform: translateX(100px) skewX(-30deg); }
+            to { opacity: 1; transform: translateX(0) skewX(0); }
+        }
+        
+         
+        
+    </style>
+</head>
+<body>
+    <h1 class="typeanime">This is also called typing animations. this is special about typing</h1>
+    <div class="blank"></div>
+    <div id="container1">
+        <div id="box" class="box1"></div>
+        <div id="box" class="box1"></div>
+        <div id="box" class="box1"></div>
+        <div id="box" class="box2"></div>
+        <div id="box" class="box2"></div>
+        <div id="box" class="box2"></div>
+        <div id="box" class="box3"></div>
+        <div id="box" class="box3"></div>
+        <div id="box" class="box3"></div>
+        <div id="box" class="box4"></div>
+        <div id="box" class="box4"></div>
+        <div id="box" class="box4"></div>
+        <div id="box" class="box5"></div>
+        <div id="box" class="box5"></div>
+        <div id="box" class="box5"></div>
+        <div id="box" class="box6"></div>
+        <div id="box" class="box6"></div>
+        <div id="box" class="box6"></div>
+        <div id="box" class="box7"></div>
+        <div id="box" class="box7"></div>
+        <div id="box" class="box7"></div>
+        <div id="box" class="box8"></div>
+        <div id="box" class="box8"></div>
+        <div id="box" class="box8"></div>
+        <div id="box" class="box9"></div>
+        <div id="box" class="box9"></div>
+        <div id="box" class="box9"></div>
+        <div id="box" class="box10"></div>
+        <div id="box" class="box10"></div>
+        <div id="box" class="box10"></div>
+        <div id="box" class="box11"></div>
+        <div id="box" class="box11"></div>
+        <div id="box" class="box11"></div>
+        <div id="box" class="box12"></div>
+        <div id="box" class="box12"></div>
+        <div id="box" class="box12"></div>
+        <div id="box" class="box13"></div>
+        <div id="box" class="box13"></div>
+        <div id="box" class="box13"></div>
+        <div id="box" class="box14"></div>
+        <div id="box" class="box14"></div>
+        <div id="box" class="box14"></div>
+        <div id="box" class="box15"></div>
+        <div id="box" class="box15"></div>
+        <div id="box" class="box15"></div>
+        <div id="box" class="box16"></div>
+        <div id="box" class="box16"></div>
+        <div id="box" class="box16"></div>
+        
+
+
+
+    </div>
+</body>
+</html>
